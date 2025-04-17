@@ -1,0 +1,37 @@
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+
+.navbar {
+    background-color: rgb(255, 255, 255);
+    height: 5rem;
+}
+
+
+.fa-map-location-dot {
+    color: red;
+    font-size: 2rem;
+}
+
+
+.showimg {
+    height: 200px; 
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.3s ease-in-out; 
+}
+.listitem {
+    /* overflow: hidden;  */
+    border-radius: 8px;
+}
+.cardhome {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+.cardhome:hover {
+    transform: translateY(-10px) scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}

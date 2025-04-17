@@ -1,0 +1,63 @@
+<% layout('../layout/basicLayout') -%>
+
+    <body class="bg-light">
+
+
+
+        <div class="return-home position-fixed top-0 end-0 m-3">
+            <form method="get" action="/home">
+                <button class="btn btn-outline-primary">
+                    <i class="fas fa-home"></i>
+                </button>
+            </form>
+        </div>
+
+
+        <div class="show-container mt-5 mb-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+
+
+                    <div class="card shadow-sm" style="width: 100%;">
+                        <img src="<%= listing.image.url %>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= listing.title %>
+                            </h5>
+                            <p class="card-text">
+                                <%= listing.description %>
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"></li>
+                            <li class="list-group-item"><b>Price:</b> &#x20b9; <%= listing.price.toLocaleString('en-IN')
+                                    %>
+                            </li>
+                            <li class="list-group-item"><b>Location:</b>
+                                <%= listing.location %>
+                            </li>
+                            <li class="list-group-item"><b>Country:</b>
+                                <%= listing.country %>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="btnshow d-flex justify-content-between mt-4">
+                        <form method="get" action="/listings/edit/<%= listing._id %>">
+                            <button class="btn btn-primary">Edit Listing</button>
+                        </form>
+                        <form method="post" action="/listings/<%= listing._id %>?_method=DELETE">
+                            <button class="btn btn-danger">Delete Listing</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    </body>
+
+    </html>
